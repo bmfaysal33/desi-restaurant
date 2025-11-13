@@ -20,57 +20,87 @@
 
 <body>
   <header>
-    <div class="navbar bg-base-100 shadow-sm">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-          </div>
-          <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-            <li><a>Item 1</a></li>
-            <li>
-              <a>Parent</a>
-              <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+    <div id="navbar"
+      class="navbar fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-sm transition-all duration-300 z-50">
+      <div class="max-w-7xl mx-auto w-full px-4">
+        <div class="flex items-center justify-between py-2">
+
+          <!-- Navbar Start -->
+          <div class="navbar-start flex items-center gap-2">
+            <!-- Mobile Menu -->
+            <div class="dropdown">
+              <button tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+              <ul tabindex="-1" class="menu menu-sm dropdown-content bg-white rounded-box shadow-md mt-3 w-52 p-2">
+                <li><a class="hover:bg-[#0C4B41] hover:text-white rounded-md">Home</a></li>
+                <li><a class="hover:bg-[#0C4B41] hover:text-white rounded-md">About</a></li>
+                <li><a class="hover:bg-[#0C4B41] hover:text-white rounded-md">Menu</a></li>
+                <li><a class="hover:bg-[#0C4B41] hover:text-white rounded-md">Pages</a></li>
+                <li><a class="hover:bg-[#0C4B41] hover:text-white rounded-md">Blog</a></li>
+                <li><a class="hover:bg-[#0C4B41] hover:text-white rounded-md">Contact</a></li>
               </ul>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
+            </div>
+
+            <!-- Brand -->
+            <a class="btn btn-ghost normal-case text-2xl font-bold text-[#0C4B41] tracking-wide">
+              <i class="fa-solid fa-leaf mr-2 text-[#0C4B41]"></i> Silage
+            </a>
+          </div>
+
+          <!-- Navbar Center (Desktop Links) -->
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 space-x-3 font-medium text-gray-700">
+              <li><a class="relative group">Home
+                  <span
+                    class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0C4B41] transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+              <li><a class="relative group">About
+                  <span
+                    class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0C4B41] transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+              <li><a class="relative group">Menu
+                  <span
+                    class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0C4B41] transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+              <li><a class="relative group">Pages
+                  <span
+                    class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0C4B41] transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+              <li><a class="relative group">Blog
+                  <span
+                    class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0C4B41] transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+              <li><a class="relative group">Contact
+                  <span
+                    class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0C4B41] transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+            </ul>
+          </div>
+
+          <!-- Navbar End -->
+          <div class="navbar-end flex items-center gap-3">
+            <!-- Call Button -->
+            <button
+              class="hidden cursor-pointer md:flex items-center gap-2 bg-white border border-[#0C4B41] text-[#0C4B41] hover:bg-[#0C4B41] hover:text-white transition-all px-4 py-2 rounded-lg font-medium shadow-sm">
+              <i class="fa-solid fa-phone-volume text-lg"></i>
+              <div class="text-left text-sm leading-tight">
+                <span class="block font-semibold">Call Now</span>
+                <span class="block text-xs">017400000</span>
+              </div>
+            </button>
+
+            <!-- Reservation Button -->
+            <a
+              class="btn bg-gradient-to-r from-[#0C4B41] to-[#158f7b] text-white font-semibold border-none hover:scale-105 transition-all rounded-full">
+              Find Reservation
+            </a>
+          </div>
+
         </div>
-        <a class="btn btn-ghost text-xl">daisyUI</a>
-      </div>
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-          <li><a>Home</a></li>
-          <li><a>About</a></li>
-          <li><a>Menu</a></li>
-          <li><a>Pages</a></li>
-          <li>
-            <details>
-              <summary>Blog</summary>
-              <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a>Contact</a></li>
-        </ul>
-      </div>
-      <div class="navbar-end">
-        <button class="btn mr-8">
-          <div>
-            <i class="fa-solid text-xl fa-phone-volume"></i>
-          </div>
-          <div>
-            Call Now <br> 017400000
-          </div>
-        </button>
-        <a class="btn">Find Reservation</a>
       </div>
     </div>
   </header>
@@ -79,170 +109,364 @@
   <main>
 
     <!-- hero section -->
-    <section>
-      <img src="assests/hero.webp" alt="">
-    </section>
+     <section class="relative mt-20 w-full overflow-hidden">
+  <!-- Slider Container -->
+  <div id="heroSlider" class="w-full h-[90vh] relative">
+    <img src="assests/hero.webp" alt="Hero 1" class="w-full h-full object-cover absolute opacity-100 transition-opacity duration-700">
+    <img src="assests/populer-bg.jpg" alt="Hero 2" class="w-full h-full object-cover absolute opacity-0 transition-opacity duration-700">
+    <img src="assets/hero3.webp" alt="Hero 3" class="w-full h-full object-cover absolute opacity-0 transition-opacity duration-700">
+  </div>
 
-    <!-- About Restaurant -->
+  <!-- Buttons -->
+  <button id="prevBtn" class="absolute left-5 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white p-3 rounded-full">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button id="nextBtn" class="absolute right-5 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white p-3 rounded-full">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</section>
 
-    <section class="flex flex-col justify-center items-center w-11/12 mx-auto">
 
-      <div class="my-10">
-        <h2>About Silage</h2>
-        <h1 class="text-5xl font-semibold">Come to Our Restaurant, Ready Your Food.</h1>
+<script>
+  const slides = document.querySelectorAll('#heroSlider img');
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach((img, idx) => {
+      img.classList.toggle('opacity-100', idx === i);
+      img.classList.toggle('opacity-0', idx !== i);
+    });
+  }
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+</script>
+
+  
+<!-- About Restaurant Section -->
+<section class="flex flex-col justify-center items-center w-11/12 mx-auto py-16">
+
+  <!-- Heading -->
+  <div class="text-center mb-12 space-y-3">
+    <h2 class="text-green-700 font-semibold uppercase tracking-wide">About Silage</h2>
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-800">
+      Come to Our Restaurant, Ready Your Food.
+    </h1>
+  </div>
+
+  <!-- Content Grid -->
+  <div class="flex flex-col lg:flex-row justify-between items-start gap-10">
+
+    <!-- Left Image -->
+    <div class="lg:w-1/3">
+      <img class="rounded-3xl shadow-lg hover:scale-105 transition-transform duration-500" src="assests/about1.jpg" alt="Restaurant Interior">
+    </div>
+
+    <!-- Right Content -->
+    <div class="lg:w-2/3 space-y-10">
+
+      <!-- Mission Card -->
+      <div class="flex flex-col md:flex-row md:items-start gap-6">
+        <div class="border-2 border-green-700 rounded-xl p-6 text-center md:text-left bg-green-50 shadow-sm hover:shadow-md transition-all duration-300">
+          <i class="fa-solid fa-bullseye text-4xl text-green-700 mb-3"></i>
+          <h3 class="text-xl font-semibold text-gray-800">Our Mission</h3>
+        </div>
+        <p class="text-gray-600 leading-relaxed md:w-3/4">
+          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
+          with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
       </div>
 
-      <div class="flex flex-col lg:flex-row justify-between gap-10">
-        <!-- image div  -->
-        <div class="md:w-1/3"><img class="rounded-2xl" src="assests/about1.jpg" alt=""></div>
-        <!-- Upper text  -->
-        <div class="md:w-2/3">
-          <div class="flex justify-between">
-            <!-- card -->
-            <div class="border-2 rounded-xl border-black mr-4 p-4 mb-5">
-              <i class="fa-solid text-2xl text-green-800 fa-bullseye"></i>
-              <br>
-              <h3>Our Mission</h3>
-            </div>
-            <div>
-              <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-                versions of Lorem Ipsum.</p>
-            </div>
-          </div>
-          <!-- Bottom text and image  -->
-          <div class="flex justify-between">
-            <div>
-              <div class="mb-4">
-                <ul>
-                  <li>Delicious Food.</li>
-                  <li>Cost Effective.</li>
-                  <li>Clean Environment.</li>
+      <!-- Bottom Section -->
+      <div class="flex flex-col md:flex-row justify-between gap-8 items-start">
+        <div class="space-y-6">
+          <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-700 list-disc list-inside">
+            <li>Delicious Food</li>
+            <li>Cost Effective</li>
+            <li>Clean Environment</li>
+            <li>Expert Chef</li>
+            <li>Letraset Sheets</li>
+            <li>Quality Food</li>
+          </ul>
 
-                  <li>Expert Chef.</li>
-                  <li>Letraset Sheets.</li>
-                  <li>Quality Food.</li>
-                </ul>
-              </div>
-              <div class="border-2 p-4 rounded-md mr-4">
-                <p>“Welcome our restaurant! Our Restaurant is the best as like delicious food, nutrition food etc in
-                  world-wide.”</p>
-              </div>
-            </div>
-            <div><img class="rounded-xl" src="assests/about2.jpg" alt=""></div>
+          <div class="border-2 border-green-700 bg-green-50 p-5 rounded-xl shadow-sm italic text-gray-700 hover:bg-green-100 transition-colors">
+            “Welcome to our restaurant! Experience the best in delicious, nutritious, and quality food worldwide.”
           </div>
         </div>
+
+        <!-- Second Image -->
+        <div class="md:w-1/2 mx-auto">
+          <img class="rounded-3xl shadow-lg mx-auto hover:scale-105 transition-transform duration-500" src="assests/about2.jpg" alt="Chef Cooking">
+        </div>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
 
 
     <!-- New item lists  -->
 
-    <section class="flex flex-col justify-center items-center my-40">
-      <div class="mb-10">
-        <h4>Our New Item</h4>
-        <h3 class="text-5xl font-semibold">Silage New Item List</h3>
+    <section class="flex flex-col justify-center items-center my-24 px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h4 class="text-sm italic text-gray-500">Our New Item</h4>
+        <h3 class="text-4xl md:text-5xl font-semibold text-gray-900">Silage New Item List</h3>
       </div>
 
-      <div class="flex flex-col md:flex-row justify-center items-center gap-5"> <!-- Cards container  -->
+      <!-- Main Cards -->
+      <div class="flex flex-col md:flex-row justify-center items-stretch gap-6 w-full max-w-6xl">
 
-        <!-- Card 01 -->
-        <div class="p-8 border-2 rounded-md">
-          <button>Special Offers</button>
-          <h3 class="text-3xl">Our New Item has offer</h3>
-          <div class="border-2 p-4 rounded-md text-center my-5">
-            <p>After Discount <br> <span class="text-4xl">20%</span></p>
+        <!-- Card 1 -->
+        <div
+          class="flex flex-col justify-center items-center border border-gray-200 rounded-xl p-10 text-center hover:shadow-lg transition-all duration-300 w-full md:w-1/3">
+          <button class="bg-[#0C4B41] text-white text-sm px-4 py-1 rounded-sm mb-4">
+            Special Offer
+          </button>
+          <h3 class="text-xl font-medium text-gray-800 mb-4">Our New Item has offer</h3>
+          <div class="border border-gray-300 rounded-md px-8 py-4">
+            <p class="text-gray-800">
+              After Discount <br />
+              <span class="text-3xl font-bold text-[#0C4B41]">20%</span>
+            </p>
           </div>
         </div>
 
-
-        <!-- Card 02 -->
-        <div class="p-8 border-2 rounded-md">
-          <button>Special Offers</button>
-          <h3 class="text-3xl">Our New Item has offer</h3>
-          <div class="border-2 p-4 rounded-md text-center my-5">
-            <p>After Discount <br> <span class="text-4xl">20%</span></p>
+        <!-- Card 2 -->
+        <div
+          class="relative border border-gray-200 rounded-xl overflow-hidden w-full md:w-1/3 text-center hover:shadow-lg transition-all duration-300">
+          <img src="assests/populer2.png" alt="Chicken Fried" class="w-full h-80 object-cover" />
+          <div
+            class="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-[#0C4B41] px-4 py-1 rounded-t-md shadow">
+            <span class="text-sm font-medium text-white">Price - $8</span>
           </div>
+          <h3 class="text-xl font-semibold mt-5 mb-6">Chicken Fried</h3>
         </div>
 
-
-        <!-- Card 03 -->
-        <div class="p-8 border-2 rounded-md">
-          <button>Special Offers</button>
-          <h3 class="text-3xl">Our New Item has offer</h3>
-          <div class="border-2 p-4 rounded-md text-center my-5">
-            <p>After Discount <br> <span class="text-4xl">20%</span></p>
+        <!-- Card 3 -->
+        <div
+          class="relative flex flex-col justify-center items-center border border-gray-200 rounded-xl overflow-hidden w-full md:w-1/3 text-center hover:shadow-lg transition-all duration-300">
+          <img src="assests/populer2.png" alt="Private Event" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="relative z-10 text-white p-8">
+            <h5 class="text-sm italic mb-2">Reserve</h5>
+            <h3 class="text-2xl font-semibold mb-4">For Your Private Event</h3>
+            <button class="bg-[#0C4B41] px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0a3c33] transition">
+              Book Table
+            </button>
           </div>
         </div>
-
 
       </div>
-    </section>
 
+      <!-- Bottom Slider Navigation -->
+      <div class="flex items-center justify-center gap-4 mt-14">
+        <button
+          class="w-10 h-10 border border-[#0C4B41] rounded-full flex items-center justify-center text-[#0C4B41] bg-green-500 hover:bg-[#0C4B41] hover:text-white transition">
+          ←
+        </button>
 
-    <!-- Our popular Items  -->
-
-    <section
-      class="h-full flex flex-col justify-center items-center bg-[url(assests/populer-bg.jpg)] text-center py-40">
-      <div class="my-8">
-        <p class="text-white">Our Popular Item</p>
-        <h3 class="text-white text-4xl text-center">Silage Popular Item List</h3>
-      </div>
-      <div class="w-3/4 my-10 mx-auto flex flex-col md:flex-row gap-6">
-
-        <!-- Card 01 -->
-        <div class="p-6 border-2 border-white rounded-xl text-center">
-          <div><img src="assests/populer2.png" alt=""></div>
-          <div>
-            <h3 class="text-white text-4xl my-8">Thai soup</h3>
-            <p class="text-white">It is a long established fact that a reader will be distracted.</p>
-          </div>
+        <!-- Circle thumbnails -->
+        <div class="flex gap-3">
+          <img src="assests/profile.png" alt=""
+            class="w-16 h-16 rounded-full object-cover border-2 border-transparent hover:border-[#0C4B41] cursor-pointer transition" />
+          <img src="assests/profile.png" alt=""
+            class="w-16 h-16 rounded-full object-cover border-2 border-transparent hover:border-[#0C4B41] cursor-pointer transition" />
+          <img src="assests/profile.png" alt=""
+            class="w-16 h-16 rounded-full object-cover border-2 border-transparent hover:border-[#0C4B41] cursor-pointer transition" />
+          <img src="assests/profile.png" alt=""
+            class="w-16 h-16 rounded-full object-cover border-2 border-transparent hover:border-[#0C4B41] cursor-pointer transition" />
+          <img src="assests/profile.png" alt=""
+            class="w-16 h-16 rounded-full object-cover border-2 border-transparent hover:border-[#0C4B41] cursor-pointer transition" />
         </div>
 
-
-        <!-- Card 02 -->
-        <div class="p-6 border-2 border-white rounded-xl text-center">
-          <div><img src="assests/populer2.png" alt=""></div>
-          <div>
-            <h3 class="text-white text-4xl my-8">Thai soup</h3>
-            <p class="text-white">It is a long established fact that a reader will be distracted.</p>
-          </div>
-        </div>
-
-
-        <!-- Card 03 -->
-        <div class="p-6 border-2 border-white rounded-xl text-center">
-          <div><img src="assests/populer2.png" alt=""></div>
-          <div>
-            <h3 class="text-white text-4xl my-8">Thai soup</h3>
-            <p class="text-white">It is a long established fact that a reader will be distracted.</p>
-          </div>
-        </div>
-
-
+        <button
+          class="w-10 h-10 border border-[#0C4B41] rounded-full flex items-center justify-center text-[#0C4B41] bg-green-500 hover:bg-[#0C4B41] hover:text-white transition">
+          →
+        </button>
       </div>
     </section>
 
 
+
+   <!-- Our popular Items  -->
+<section class="relative h-full flex flex-col justify-center items-center text-center py-32 bg-cover bg-center bg-fixed"
+  style="background-image: url('assests/populer-bg.jpg');">
+
+  <!-- Semi-transparent overlay (no blur) -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Content Wrapper -->
+  <div class="relative z-10 w-11/12 md:w-3/4 mx-auto">
+
+    <!-- Section Header -->
+    <div class="my-8 space-y-3">
+      <p class="text-green-400 uppercase tracking-widest font-medium">Our Popular Items</p>
+      <h3 class="text-white text-4xl md:text-5xl font-bold drop-shadow-lg">Silage Popular Item List</h3>
+    </div>
+
+    <!-- Cards Container -->
+    <div class="flex flex-col md:flex-row justify-center gap-8 mt-14">
+
+      <!-- Card 01 -->
+      <div
+        class="group relative p-8 rounded-2xl border border-white/20 bg-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+        <div class="overflow-hidden w-full rounded-xl">
+          <img class="w-full h-64 object-contain mx-auto transition-transform duration-500 group-hover:scale-110"
+            src="assests/populer2.png" alt="Thai Soup">
+        </div>
+        <h3 class="text-white text-3xl font-semibold my-6 drop-shadow-md">Thai Soup</h3>
+        <p class="text-gray-200">A delightful blend of herbs and spices that brings warmth and flavor in every spoonful.</p>
+      </div>
+
+      <!-- Card 02 -->
+      <div
+        class="group relative p-8 rounded-2xl border border-white/20 bg-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+        <div class="overflow-hidden rounded-xl">
+          <img class="w-full h-64 object-contain mx-auto transition-transform duration-500 group-hover:scale-110"
+            src="assests/populer2.png" alt="Grilled Chicken">
+        </div>
+        <h3 class="text-white text-3xl font-semibold my-6 drop-shadow-md">Grilled Chicken</h3>
+        <p class="text-gray-200">Juicy, smoky, and perfectly seasoned — a timeless favorite for every food lover.</p>
+      </div>
+
+      <!-- Card 03 -->
+      <div
+        class="group relative p-8 rounded-2xl border border-white/20 bg-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+        <div class="overflow-hidden rounded-xl">
+          <img class="w-full h-64 object-contain mx-auto transition-transform duration-500 group-hover:scale-110"
+            src="assests/populer2.png" alt="Pasta Primavera">
+        </div>
+        <h3 class="text-white text-3xl font-semibold my-6 drop-shadow-md">Pasta Primavera</h3>
+        <p class="text-gray-200">Fresh vegetables, rich sauce, and tender pasta — a perfect balance of taste and health.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <!-- Menu Section -->
+    <section class="py-20 bg-[#f8f9f6] text-gray-800">
+      <div class="text-center mb-12">
+        <p class="italic text-green-700 text-lg">Menu List</p>
+        <h2 class="text-4xl font-bold mt-2">Our Menu List</h2>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-center items-start gap-10 w-11/12 md:w-3/4 mx-auto">
+        <!-- Indian Menu -->
+        <div class="relative bg-white border border-green-200 shadow-md rounded-xl p-8 flex-1">
+          <!-- Decorative corners -->
+
+          <div class="text-center mb-6">
+            <p class="italic text-green-700">Welcome to Silage</p>
+            <h3 class="text-2xl font-semibold">Indian Menu</h3>
+          </div>
+
+          <ul class="space-y-4">
+            <li class="flex justify-between items-center border-b border-dotted border-green-500 pb-1">
+              <span class="font-medium">01. Pancer Butter</span><span class="text-green-700 font-semibold">$10</span>
+            </li>
+            <p class="text-gray-500 text-sm mb-3">Delicious food served fresh. Visit us early!</p>
+
+            <li class="flex justify-between items-center border-b border-dotted border-green-500 pb-1">
+              <span class="font-medium">02. Veg Biriyani</span><span class="text-green-700 font-semibold">$15</span>
+            </li>
+            <p class="text-gray-500 text-sm mb-3">Delicious food served fresh. Visit us early!</p>
+
+            <li class="flex justify-between items-center border-b border-dotted border-green-500 pb-1">
+              <span class="font-medium">03. Fried Rice</span><span class="text-green-700 font-semibold">$22</span>
+            </li>
+            <p class="text-gray-500 text-sm mb-3">Delicious food served fresh. Visit us early!</p>
+
+            <li class="flex justify-between items-center border-b border-dotted border-green-500 pb-1">
+              <span class="font-medium">04. Chicken Tikka</span><span class="text-green-700 font-semibold">$15</span>
+            </li>
+            <p class="text-gray-500 text-sm mb-3">Delicious food served fresh. Visit us early!</p>
+          </ul>
+
+          <div class="mt-6 text-center text-sm text-gray-600">
+            <p class="font-semibold">N.B: Please don’t waste your food.</p>
+            <p>Address: Mirpur DOHS, House No-167/170, Avenue-01.</p>
+          </div>
+        </div>
+
+        <!-- Italian Menu -->
+        <div class="relative bg-white border border-green-200 shadow-md rounded-xl p-8 flex-1">
+
+
+          <div class="text-center mb-6">
+            <p class="italic text-green-700">Welcome to Silage</p>
+            <h3 class="text-2xl font-semibold">Italian Menu</h3>
+          </div>
+
+          <ul class="space-y-4">
+            <li class="flex justify-between items-center border-b border-dotted border-green-500 pb-1">
+              <span class="font-medium">01. Grey Butter</span><span class="text-green-700 font-semibold">$10</span>
+            </li>
+            <p class="text-gray-500 text-sm mb-3">Freshly made with Italian herbs and love.</p>
+
+            <li class="flex justify-between items-center border-b border-dotted border-green-500 pb-1">
+              <span class="font-medium">02. Salt Beef</span><span class="text-green-700 font-semibold">$18</span>
+            </li>
+            <p class="text-gray-500 text-sm mb-3">Freshly made with Italian herbs and love.</p>
+
+            <li class="flex justify-between items-center border-b border-dotted border-green-500 pb-1">
+              <span class="font-medium">03. Barley Soup</span><span class="text-green-700 font-semibold">$12</span>
+            </li>
+            <p class="text-gray-500 text-sm mb-3">Freshly made with Italian herbs and love.</p>
+
+            <li class="flex justify-between items-center border-b border-dotted border-green-500 pb-1">
+              <span class="font-medium">04. Pasta Alfredo</span><span class="text-green-700 font-semibold">$17</span>
+            </li>
+            <p class="text-gray-500 text-sm mb-3">Freshly made with Italian herbs and love.</p>
+          </ul>
+
+          <div class="mt-6 text-center text-sm text-gray-600">
+            <p class="font-semibold">N.B: Please don’t waste your food.</p>
+            <p>Address: Mirpur DOHS, House No-167/170, Avenue-01.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Customer Feedbacks  -->
 
-    <section class="bg-black text-white py-32">
+    <section class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-32">
+      <div class="flex md:flex-row flex-col-reverse justify-center items-center w-11/12 gap-10 md:w-3/4 mx-auto">
 
-      <div class="flex md:flex-row flex-col-reverse justify-center items-center w-11/12 gap-4 md:w-3/4 mx-auto ">
+        <!-- Dynamic (Testimonial) Side -->
+        <div
+          class="relative bg-gray-900/70 backdrop-blur-md border border-gray-700 p-10 rounded-2xl shadow-lg hover:shadow-green-500/20 transition-all duration-500 hover:-translate-y-1 w-full md:w-1/2">
 
+          <!-- Quote Icon -->
+          <div class="absolute -top-5 -left-5 bg-green-600 text-white p-3 rounded-full shadow-lg">
+            <i class="fa-solid fa-quote-left text-2xl"></i>
+          </div>
 
-        <!-- Dynamic side  -->
-        <div class="border-2 border-white flex flex-col justify-between items-center p-10 rounded-xl mr-6">
-
-          <!-- Profile and Ratings  -->
-          <div class="flex flex-row justify-between items-center w-full mx-auto mb-8">
-            <div>
-              <h3>David van</h3>
-              <p>Guest </p>
+          <!-- Profile and Ratings -->
+          <div class="flex justify-between items-center w-full mb-6">
+            <div class="flex items-center gap-4">
+              <img src="https://i.pravatar.cc/60?img=12" alt="Profile"
+                class="w-14 h-14 rounded-full border-2 border-green-500">
+              <div>
+                <h3 class="text-lg font-semibold">David Van</h3>
+                <p class="text-gray-400 text-sm">Guest</p>
+              </div>
             </div>
-            <div class="flex flex-row items-center">
+
+            <div class="flex text-yellow-400">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -251,24 +475,296 @@
             </div>
           </div>
 
-          <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sequi nesciunt perspiciatis
-              dicta minima vel ipsam. Neque odio, ut culpa perspiciatis magnam excepturi mollitia cum corporis ipsa
-              distinctio sed?</p>
-          </div>
+          <!-- Review Text -->
+          <p class="text-gray-300 leading-relaxed">
+            “Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sequi nesciunt perspiciatis
+            dicta minima vel ipsam. Neque odio, ut culpa perspiciatis magnam excepturi mollitia cum corporis ipsa
+            distinctio sed.”
+          </p>
         </div>
 
-        <!-- Static side  -->
-        <div class="flex flex-col justify-start items-center w-full text-left">
-          <h4 class="text-xl w-full">Testimonials</h4>
-          <h2 class="text-5xl my-4 w-full">Customer Feedback</h2>
-          <p class="">It is a long established fact that a reader will be distracted.Various versions have evolved over.
+        <!-- Static (Heading) Side -->
+        <div class="flex flex-col justify-start items-start text-left w-full md:w-1/2 space-y-5">
+          <h4 class="text-green-400 uppercase tracking-widest text-lg font-semibold">Testimonials</h4>
+          <h2 class="text-5xl font-bold leading-tight">Customer Feedback</h2>
+          <p class="text-gray-400 max-w-lg">
+            It is a long established fact that a reader will be distracted by readable content. Various versions have
+            evolved
+            over time, but our service stands out through consistency and care.
           </p>
+          <button
+            class="mt-4 px-6 py-3 rounded-full bg-green-600 hover:bg-green-500 text-white font-semibold transition-all duration-300">
+            View More Reviews
+          </button>
         </div>
 
       </div>
     </section>
+
+
+
+
+    <!-- Cooking Expertise -->
+    <section class="w-11/12 mx-auto text-center flex flex-col justify-center items-center py-28">
+      <!-- Heading -->
+      <div>
+        <h3 class="text-2xl text-green-700 font-medium">Experties</h3>
+        <h2 class="text-5xl font-bold text-gray-800">Cooking Expertise</h2>
+      </div>
+
+      <!-- Card Container -->
+      <div class="my-12 flex flex-col md:flex-row flex-wrap gap-10 justify-center items-center">
+
+        <!-- Card 01 -->
+
+        <div
+          class="group relative w-80 bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
+          <div class="relative">
+            <img src="assests/chef-kitchen-1.jpg" alt="Chef" class="rounded-t-xl w-full h-96 object-cover" />
+            <span
+              class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-green-600 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+            <span
+              class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-green-600 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+            <div
+              class="absolute top-5 right-5 flex flex-col items-center space-y-2 transition-all duration-300 group-hover:space-y-3">
+              <div
+                class="w-10 h-10 bg-white rounded-full flex justify-center items-center shadow-md text-green-700 cursor-pointer group-hover:shadow-lg transition">
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
+              <div
+                class="flex flex-col items-center gap-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                <a href="#"
+                  class="w-8 h-8 rounded-full bg-blue-600 flex justify-center items-center text-white hover:scale-110"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"
+                  class="w-8 h-8 rounded-full bg-pink-500 flex justify-center items-center text-white hover:scale-110"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="#"
+                  class="w-8 h-8 rounded-full bg-sky-500 flex justify-center items-center text-white hover:scale-110"><i
+                    class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="py-6 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800">Mr. John Willium</h2>
+            <p class="text-green-700 font-medium mt-1">Senior Chef</p>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div
+          class="group relative w-80 bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
+          <div class="relative">
+            <img src="assests/chef-kitchen-1.jpg" alt="Chef" class="rounded-t-xl w-full h-96 object-cover" />
+            <span
+              class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-green-600 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+            <span
+              class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-green-600 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+            <div
+              class="absolute top-5 right-5 flex flex-col items-center space-y-2 transition-all duration-300 group-hover:space-y-3">
+              <div
+                class="w-10 h-10 bg-white rounded-full flex justify-center items-center shadow-md text-green-700 cursor-pointer group-hover:shadow-lg transition">
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
+              <div
+                class="flex flex-col items-center gap-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                <a href="#"
+                  class="w-8 h-8 rounded-full bg-blue-600 flex justify-center items-center text-white hover:scale-110"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"
+                  class="w-8 h-8 rounded-full bg-pink-500 flex justify-center items-center text-white hover:scale-110"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="#"
+                  class="w-8 h-8 rounded-full bg-sky-500 flex justify-center items-center text-white hover:scale-110"><i
+                    class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="py-6 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800">Mr. John Willium</h2>
+            <p class="text-green-700 font-medium mt-1">Senior Chef</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+
+        <div
+          class="group relative w-80 bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
+          <div class="relative">
+            <img src="assests/chef-kitchen-1.jpg" alt="Chef" class="rounded-t-xl w-full h-96 object-cover" />
+            <span
+              class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-green-600 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+            <span
+              class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-green-600 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+            <div
+              class="absolute top-5 right-5 flex flex-col items-center space-y-2 transition-all duration-300 group-hover:space-y-3">
+              <div
+                class="w-10 h-10 bg-white rounded-full flex justify-center items-center shadow-md text-green-700 cursor-pointer group-hover:shadow-lg transition">
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
+              <div
+                class="flex flex-col items-center gap-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                <a href="#"
+                  class="w-8 h-8 rounded-full bg-blue-600 flex justify-center items-center text-white hover:scale-110"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"
+                  class="w-8 h-8 rounded-full bg-pink-500 flex justify-center items-center text-white hover:scale-110"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="#"
+                  class="w-8 h-8 rounded-full bg-sky-500 flex justify-center items-center text-white hover:scale-110"><i
+                    class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="py-6 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800">Mr. John Willium</h2>
+            <p class="text-green-700 font-medium mt-1">Senior Chef</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    
+<!-- Recent News Section -->
+<section class="w-11/12 md:w-10/12 mx-auto py-16 text-center">
+  <!-- Section Header -->
+  <div class="mb-12">
+    <p class="text-green-800 italic mb-2">Recent News</p>
+    <h2 class="text-4xl md:text-5xl font-semibold text-gray-900">Our Recent News</h2>
+  </div>
+
+  <!-- News Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Card 1 -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+      <div class="relative">
+        <img src="assests/news1.jpg" alt="News 1" class="w-full h-60 object-cover">
+        <span class="absolute top-4 left-4 bg-[#0C4B41] text-white text-sm font-medium px-3 py-1 rounded">
+          March 3, 2023
+        </span>
+      </div>
+      <div class="p-6 text-left">
+        <div class="flex items-center gap-4 text-gray-500 text-sm mb-4">
+          <span class="flex items-center gap-1"><i class="fa-regular fa-user"></i> By Shafiqul</span>
+          <span class="w-px h-4 bg-gray-300"></span>
+          <span class="flex items-center gap-1"><i class="fa-regular fa-comment"></i> Comments (0)</span>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 leading-snug hover:text-[#0C4B41] transition-colors">
+          Eat Healthy Food & Get Your Happiness
+        </h3>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+      <div class="relative">
+        <img src="assests/news2.jpg" alt="News 2" class="w-full h-60 object-cover">
+        <span class="absolute top-4 left-4 bg-[#0C4B41] text-white text-sm font-medium px-3 py-1 rounded">
+          January 23, 2023
+        </span>
+      </div>
+      <div class="p-6 text-left">
+        <div class="flex items-center gap-4 text-gray-500 text-sm mb-4">
+          <span class="flex items-center gap-1"><i class="fa-regular fa-user"></i> By Shafiqul</span>
+          <span class="w-px h-4 bg-gray-300"></span>
+          <span class="flex items-center gap-1"><i class="fa-regular fa-comment"></i> Comments (0)</span>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 leading-snug hover:text-[#0C4B41] transition-colors">
+          Special Food For Childrens From Our Experties Chef
+        </h3>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+      <div class="relative">
+        <img src="assests/news3.jpg" alt="News 3" class="w-full h-60 object-cover">
+        <span class="absolute top-4 left-4 bg-[#0C4B41] text-white text-sm font-medium px-3 py-1 rounded">
+          January 23, 2023
+        </span>
+      </div>
+      <div class="p-6 text-left">
+        <div class="flex items-center gap-4 text-gray-500 text-sm mb-4">
+          <span class="flex items-center gap-1"><i class="fa-regular fa-user"></i> By Shafiqul</span>
+          <span class="w-px h-4 bg-gray-300"></span>
+          <span class="flex items-center gap-1"><i class="fa-regular fa-comment"></i> Comments (0)</span>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 leading-snug hover:text-[#0C4B41] transition-colors">
+          Delicious Food Cooking From Our Experties Chef
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   </main>
+
+  <footer
+    class="relative py-20 text-white border-t-2 bg-[url('/assests/footer1-bg.png')] bg-cover bg-center bg-no-repeat">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <!-- Footer Content -->
+    <div class="relative z-10 flex flex-col lg:flex-row justify-around items-start w-11/12 lg:w-3/4 mx-auto gap-10">
+
+      <!-- Our Facilities -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">Our Facilities</h3>
+        <div class="flex flex-row gap-8">
+          <ul class="space-y-2">
+            <li>Indian Menu</li>
+            <li>Private Event</li>
+            <li>Best Offer</li>
+            <li>Regular Menu</li>
+          </ul>
+          <ul class="space-y-2">
+            <li>Menu Item</li>
+            <li>Private Event</li>
+            <li>Best Offer</li>
+            <li>Regular Menu</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Circle (Logo) -->
+      <div
+        class="flex flex-col justify-center items-center text-center border-2 border-white rounded-full p-12 lg:p-20">
+        <h1 class="text-3xl font-semibold">Silage</h1>
+        <p class="text-sm uppercase tracking-wider">Restaurant</p>
+        <h2 class="text-sm mt-1">Established — 2025</h2>
+        <hr class="w-16 border-t border-gray-300 my-3">
+        <div class="flex gap-4 text-lg">
+          <i class="fa-brands fa-facebook hover:text-blue-400 transition"></i>
+          <i class="fa-brands fa-instagram hover:text-pink-400 transition"></i>
+          <i class="fa-brands fa-linkedin hover:text-blue-500 transition"></i>
+          <i class="fa-brands fa-square-x-twitter hover:text-gray-400 transition"></i>
+        </div>
+      </div>
+
+      <!-- Address Info -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Address Info</h2>
+        <ul class="space-y-2">
+          <li><strong>Phone:</strong> +880-1776-766-767</li>
+          <li><strong>Email:</strong> info@example.com</li>
+          <li><strong>Fax ID:</strong> +99-75667-786</li>
+          <li>
+            <strong>Location:</strong><br>
+            Mirpur DOHS,<br>House -167/170, Road - 02, Avenue - 01.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Line -->
+    <div class="relative z-10 mt-10 text-center text-sm text-gray-300">
+      © 2025 Silage Restaurant — All Rights Reserved.
+    </div>
+  </footer>
 </body>
 
 </html>
